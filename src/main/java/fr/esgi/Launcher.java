@@ -3,7 +3,9 @@ package fr.esgi;
 public class Launcher {
     public static void main(String[] args) {
 
-        System.out.println("- Main -");
+        App app = new App();
+
+        app.start();
 
     }
 }
