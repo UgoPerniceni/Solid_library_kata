@@ -10,31 +10,31 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class LibraryTest {
+public class UserListTest {
     @Mock
-    Library library;
+    UserList userList;
 
     @BeforeEach
     public void beforeTest() {
-        List<Book> books = new ArrayList<>();
-        library = new Library();
-        library.updateBooks(books);
+        List<User> users = new ArrayList<>();
+        userList = new UserList();
+        userList.updateUsers(users);
     }
 
     @Test
     public void testIsValidPerson(){
-        assertNotNull(library);
+        assertNotNull(userList);
     }
 
     @Test
     public void testHasZeroBookByDefault(){
-        assertEquals(library.getBooks().size(), 0);
+        assertEquals(userList.getUsers().size(), 0);
     }
 
     @Test
     public void shouldAddTwoBook(){
-        library.addBook((new Book("Title", new Author("Name"))));
-        library.addBook((new Book("Title2", new Author("Name2"))));
-        assertEquals(library.getBooks().size(), 2);
+        userList.addNewUser((new User("Login")));
+        userList.addNewUser((new User("Login2")));
+        assertEquals(userList.getUsers().size(), 2);
     }
 }

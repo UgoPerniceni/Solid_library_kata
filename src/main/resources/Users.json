@@ -1,0 +1,18 @@
+[ {
+  "login" : "Login",
+  "role" : "Librarian",
+  "books" : [ {
+    "title" : "Horus heresy",
+    "authorName" : {
+      "name" : "Abnett"
+    }
+  }, null, null ]
+}, {
+  "login" : "Guest",
+  "role" : "Guest",
+  "books" : [ null, null, null ]
+}, {
+  "login" : "Guest2",
+  "role" : "Guest",
+  "books" : [ null, null, null ]
+} ]

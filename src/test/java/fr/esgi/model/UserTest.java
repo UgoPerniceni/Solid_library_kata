@@ -8,35 +8,35 @@ import org.mockito.Mock;
 import static org.junit.Assert.*;
 
 
-public class PersonTest {
+public class UserTest {
     @Mock
-    Person person;
+    User user;
 
     @BeforeEach
     public void beforeTest() {
-        person = new Person("UserName1");
+        user = new User("UserName1");
     }
 
     @Test
-    public void testIsValidPerson(){
-        assertNotNull(person);
+    public void testIsValiduser(){
+        assertNotNull(user);
     }
 
     @Test
     public void testIsValidDefaultRole(){
-        assertEquals(person.getRole(), Role.Guest);
+        assertEquals(user.getRole(), Role.Guest);
     }
 
     @Test
     public void testIsNotValidLogin(){
-        person.setLogin("NewUserName1");
-        assertNotEquals(person.getLogin(), "UserName1");
+        user.setLogin("NewUserName1");
+        assertNotEquals(user.getLogin(), "UserName1");
     }
 
     @Test
     public void testIsNotValidRole(){
-        person.setRole(Role.Librarian);
-        assertNotEquals(person.getRole(), Role.Guest);
+        user.setRole(Role.Librarian);
+        assertNotEquals(user.getRole(), Role.Guest);
     }
 
 }
